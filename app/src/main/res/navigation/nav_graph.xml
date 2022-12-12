@@ -49,5 +49,13 @@
         <action
             android:id="@+id/action_LoginFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_LoginFragment_to_accelerometerPageFragment"
+            app:destination="@id/accelerometerPageFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/accelerometerPageFragment"
+        android:name="com.example.examapp.AccelerometerPageFragment"
+        android:label="fragment_accelerometer_page"
+        tools:layout="@layout/fragment_accelerometer_page" />
 </navigation>

@@ -33,12 +33,15 @@ public class LoginFragment extends Fragment {
             final String email = binding.editTextTextEmailAddress2.getText().toString();
             final String password = binding.editTextTextPassword2.getText().toString();
 
-            if (email.equals("admin") & password.equals("admin")) {
+            if (!email.equals("admin") & !password.equals("admin")) {
+                binding.editTextTextEmailAddress2.setText("Wrong e-mail");
+                binding.editTextTextPassword2.setText("Wrong password");
+
                 return;
             }
 
-            binding.editTextTextEmailAddress2.setText("Wrong e-mail");
-            binding.editTextTextPassword2.setText("Wrong password");
+            NavHostFragment.findNavController(LoginFragment.this)
+                    .navigate(R.id.action_LoginFragment_to_accelerometerPageFragment);
         });
     }
 
