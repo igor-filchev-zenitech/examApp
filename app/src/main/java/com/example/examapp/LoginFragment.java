@@ -30,7 +30,15 @@ public class LoginFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         binding.button2.setOnClickListener(view1 -> {
+            final String email = binding.editTextTextEmailAddress2.getText().toString();
+            final String password = binding.editTextTextPassword2.getText().toString();
 
+            if (email.equals("admin") & password.equals("admin")) {
+                return;
+            }
+
+            binding.editTextTextEmailAddress2.setText("Wrong e-mail");
+            binding.editTextTextPassword2.setText("Wrong password");
         });
     }
 
