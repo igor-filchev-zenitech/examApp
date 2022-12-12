@@ -47,6 +47,11 @@ public class FirstFragment extends Fragment {
 
         binding.helpPageButton.setOnClickListener(view1 -> {
             NavHostFragment.findNavController(FirstFragment.this)
+                    .navigate(R.id.action_FirstFragment_to_LoginFragment);
+        });
+
+        binding.helpPageButton.setOnClickListener(view1 -> {
+            NavHostFragment.findNavController(FirstFragment.this)
                     .navigate(R.id.action_FirstFragment_to_HelpPageFragment);
         });
     }

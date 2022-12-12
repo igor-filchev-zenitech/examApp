@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_HelpPageFragment"
             app:destination="@id/HelpPageFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -36,6 +39,15 @@
 
         <action
             android:id="@+id/action_HelpPage_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.example.examapp.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_LoginFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>
