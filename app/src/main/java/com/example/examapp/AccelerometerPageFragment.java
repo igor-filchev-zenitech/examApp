@@ -10,6 +10,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,6 +37,12 @@ public class AccelerometerPageFragment extends Fragment implements SensorEventLi
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
+        binding.helpPageButton.setOnClickListener(view1 -> {
+            NavHostFragment.findNavController(AccelerometerPageFragment.this)
+                    .navigate(R.id.action_accelerometerPageFragment_to_HelpPageFragment);
+        });
+
         sensorManager = (SensorManager) getActivity().getSystemService(SENSOR_SERVICE);
 
         if (sensorManager == null)
@@ -61,7 +68,7 @@ public class AccelerometerPageFragment extends Fragment implements SensorEventLi
 
         final String value = "X: " + x + ", Y: " + y + ", Z: " + z;
 
-        binding.textView4.setText(value);
+        binding.textView3.setText(value);
 
     }
 

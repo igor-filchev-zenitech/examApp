@@ -28,11 +28,6 @@ public class HelpPageFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        binding.goBackButton.setOnClickListener(view1 -> {
-            NavHostFragment.findNavController(HelpPageFragment.this)
-                    .navigate(R.id.action_HelpPage_to_FirstFragment);
-        });
     }
 
     @Override

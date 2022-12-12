@@ -39,12 +39,9 @@ public class SecondFragment extends Fragment {
             binding.imageView.setImageResource(imageId);
         }
 
-
-
-
-        binding.buttonSecond.setOnClickListener(view1 -> {
+        binding.helpPageButton.setOnClickListener(view1 -> {
             NavHostFragment.findNavController(SecondFragment.this)
-                    .navigate(R.id.action_SecondFragment_to_FirstFragment);
+                    .navigate(R.id.action_SecondFragment_to_HelpPageFragment);
         });
     }
 

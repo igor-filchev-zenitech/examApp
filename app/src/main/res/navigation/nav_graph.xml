@@ -26,36 +26,34 @@
         android:name="com.example.examapp.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
-
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_SecondFragment_to_HelpPageFragment"
+            app:destination="@id/HelpPageFragment" />
     </fragment>
     <fragment
         android:id="@+id/HelpPageFragment"
         android:name="com.example.examapp.HelpPageFragment"
         android:label="Help Page Fragment"
-        tools:layout="@layout/fragment_help_page">
-
-        <action
-            android:id="@+id/action_HelpPage_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_help_page"/>
     <fragment
         android:id="@+id/LoginFragment"
         android:name="com.example.examapp.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_LoginFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-        <action
             android:id="@+id/action_LoginFragment_to_accelerometerPageFragment"
             app:destination="@id/accelerometerPageFragment" />
+        <action
+            android:id="@+id/action_LoginFragment_to_HelpPageFragment"
+            app:destination="@id/HelpPageFragment" />
     </fragment>
     <fragment
         android:id="@+id/accelerometerPageFragment"
         android:name="com.example.examapp.AccelerometerPageFragment"
         android:label="fragment_accelerometer_page"
-        tools:layout="@layout/fragment_accelerometer_page" />
+        tools:layout="@layout/fragment_accelerometer_page" >
+        <action
+            android:id="@+id/action_accelerometerPageFragment_to_HelpPageFragment"
+            app:destination="@id/HelpPageFragment" />
+    </fragment>
 </navigation>

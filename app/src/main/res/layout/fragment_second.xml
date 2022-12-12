@@ -10,35 +10,35 @@
         android:id="@+id/textview_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/button_second"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button_second"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/previous"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_second" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/Winter_is_coming"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="118dp"
-        tools:src="@tools:sample/avatars" />
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="65dp"
+        tools:src="@tools:sample/avatars"
+        android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/textView2"
+        android:layout_width="370dp"
+        android:layout_height="194dp"
+        android:text="@string/LoremIpsum"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="268dp" />
+
+    <Button
+        android:id="@+id/helpPageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/LoremIpsum"
-        tools:layout_editor_absoluteX="151dp"
-        tools:layout_editor_absoluteY="309dp" />
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="119dp"
+        android:text="@string/help"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

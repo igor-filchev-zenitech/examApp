@@ -29,6 +29,11 @@ public class LoginFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        binding.helpPageButton.setOnClickListener(view1 -> {
+            NavHostFragment.findNavController(LoginFragment.this)
+                    .navigate(R.id.action_LoginFragment_to_accelerometerPageFragment);
+        });
+
         binding.button2.setOnClickListener(view1 -> {
             final String email = binding.editTextTextEmailAddress2.getText().toString();
             final String password = binding.editTextTextPassword2.getText().toString();
