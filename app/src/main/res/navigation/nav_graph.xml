@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/FirstFragment"
         android:name="com.example.examapp.FirstFragment"
-        android:label="@string/first_fragment_label"
+        android:label="Home"
         tools:layout="@layout/fragment_first">
 
         <action
@@ -24,7 +24,7 @@
     <fragment
         android:id="@+id/SecondFragment"
         android:name="com.example.examapp.SecondFragment"
-        android:label="@string/second_fragment_label"
+        android:label="Lorem Ipsum"
         tools:layout="@layout/fragment_second">
         <action
             android:id="@+id/action_SecondFragment_to_HelpPageFragment"
@@ -33,12 +33,12 @@
     <fragment
         android:id="@+id/HelpPageFragment"
         android:name="com.example.examapp.HelpPageFragment"
-        android:label="Help Page Fragment"
+        android:label="Help Page"
         tools:layout="@layout/fragment_help_page"/>
     <fragment
         android:id="@+id/LoginFragment"
         android:name="com.example.examapp.LoginFragment"
-        android:label="fragment_login"
+        android:label="Login"
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_LoginFragment_to_accelerometerPageFragment"
@@ -50,7 +50,7 @@
     <fragment
         android:id="@+id/accelerometerPageFragment"
         android:name="com.example.examapp.AccelerometerPageFragment"
-        android:label="fragment_accelerometer_page"
+        android:label="Accelerometer"
         tools:layout="@layout/fragment_accelerometer_page" >
         <action
             android:id="@+id/action_accelerometerPageFragment_to_HelpPageFragment"
