@@ -37,12 +37,6 @@ public class AccelerometerPageFragment extends Fragment implements SensorEventLi
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
-        binding.helpPageButton.setOnClickListener(view1 -> {
-            NavHostFragment.findNavController(AccelerometerPageFragment.this)
-                    .navigate(R.id.action_accelerometerPageFragment_to_HelpPageFragment);
-        });
-
         sensorManager = (SensorManager) getActivity().getSystemService(SENSOR_SERVICE);
 
         if (sensorManager == null)
@@ -54,6 +48,13 @@ public class AccelerometerPageFragment extends Fragment implements SensorEventLi
             return;
 
         sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_NORMAL);
+
+        binding.helpPageButton.setOnClickListener(view1 -> {
+            sensorManager.unregisterListener(this, sensor);
+
+            NavHostFragment.findNavController(AccelerometerPageFragment.this)
+                    .navigate(R.id.action_accelerometerPageFragment_to_HelpPageFragment);
+        });
     }
 
     @Override
@@ -81,7 +82,7 @@ public class AccelerometerPageFragment extends Fragment implements SensorEventLi
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        
+
         binding = null;
         sensorManager = null;
         sensor = null;
