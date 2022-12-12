@@ -11,13 +11,15 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.examapp.databinding.FragmentSecondBinding;
 
+import java.util.Objects;
+
 public class SecondFragment extends Fragment {
 
     private FragmentSecondBinding binding;
 
     @Override
     public View onCreateView(
-            LayoutInflater inflater, ViewGroup container,
+            @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
 
@@ -29,12 +31,20 @@ public class SecondFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(SecondFragment.this)
-                        .navigate(R.id.action_SecondFragment_to_FirstFragment);
-            }
+        if (getArguments() != null) {
+            final String imageName = getArguments().getString("imageName", "download__1_");
+
+            final int imageId = getResources().getIdentifier(imageName, "drawable", requireActivity().getPackageName());
+
+            binding.imageView.setImageResource(imageId);
+        }
+
+
+
+
+        binding.buttonSecond.setOnClickListener(view1 -> {
+            NavHostFragment.findNavController(SecondFragment.this)
+                    .navigate(R.id.action_SecondFragment_to_FirstFragment);
         });
     }
 

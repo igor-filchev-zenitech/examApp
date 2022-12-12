@@ -6,23 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".FirstFragment">
 
-    <TextView
-        android:id="@+id/textview_first"
+    <Button
+        android:id="@+id/adminPageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_first_fragment"
-        app:layout_constraintBottom_toTopOf="@id/button_first"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="25dp"
+        android:text="@string/admin"
+        app:layout_constraintBottom_toBottomOf="@+id/helpPageButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/helpPageButton" />
 
     <Button
-        android:id="@+id/button_first"
+        android:id="@+id/helpPageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/next"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="119dp"
+        android:text="@string/help"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/image_page_button_first"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="21dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/download__1_"
+        app:layout_constraintBottom_toBottomOf="@+id/image_page_button_second"
+        app:layout_constraintEnd_toStartOf="@+id/image_page_button_second"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
+        app:layout_constraintTop_toTopOf="@+id/image_page_button_second" />
+
+    <ImageButton
+        android:id="@+id/image_page_button_second"
+        android:layout_width="0dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="25dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/egypt_kitty_social"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_page_button_first"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
